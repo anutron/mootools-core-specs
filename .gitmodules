@@ -1,0 +1,10 @@
+[submodule "Tests/UnitTester"]
+        path = Tests/UnitTester
+        url = git://github.com/anutron/mootools-unittester.git
+
+[submodule "Libraries/core"]
+	path = Libraries/core
+	url = git://github.com/mootools/mootools-core.git
+[submodule "Libraries/more"]
+	path = Libraries/more
+	url = git://github.com/mootools/mootools-more.git
