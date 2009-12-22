@@ -7,7 +7,6 @@ describe('Group', {
 		(3).times(function(i){
 			instances.push(new Test());
 		});
-		console.log(instances);
 		var testgroup = new Group(instances[0], instances[1], instances[2]);
 		var success;
 		testgroup.addEvent('success', function(){
