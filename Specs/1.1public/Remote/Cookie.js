@@ -20,7 +20,7 @@ describe('Cookie', {
 
 	"should remove a cookie": function(){
 		Cookie.remove('test');
-		value_of(Cookie.get('test')).should_be_false();
+		value_of(!!Cookie.get('test')).should_be_false();
 	},
 	
 	"should set a cookie with path option": function(){
