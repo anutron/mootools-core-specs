@@ -9,14 +9,15 @@ License:
 (function(){
 
 var hash2 = new Hash({ a: 'string', b: 233, c: {} });
+var getClean = function(hash) {
+	var obj = {};
+	hash.each(function(v, k){
+		obj[k] = v;
+	});
+	return obj;
+};
 
 describe("Hash Methods", {
-
-	// Hash.constructor
-
-	'should return a new hash': function(){
-		value_of($type(new Hash())).should_be("object");
-	},
 
 	// Hash.remove
 
@@ -63,14 +64,14 @@ describe("Hash Methods", {
 
 	'should extend a Hash with an object': function(){
 		var hash = new Hash({a: 1, b: 2, c: 3});
-		value_of(hash.extend({a:4,d:7,e:8}).obj).should_be({a:4,b:2,c:3,d:7,e:8});
+		value_of(getClean(hash.extend({a:4,d:7,e:8}))).should_be({a:4,b:2,c:3,d:7,e:8});
 	},
 
 	// Hash.merge
 
 	'should merge a Hash with an object': function(){
 		var hash = new Hash({a: 1, b: 2, c: 3});
-		value_of(hash.merge({a: 4, d: 7, e: 8}).obj).should_be({a:4,b:2,c:3,d:7,e:8});
+		value_of(getClean(hash.merge({a: 4, d: 7, e: 8}))).should_be({a:4,b:2,c:3,d:7,e:8});
 	},
 
 	// Hash.each
