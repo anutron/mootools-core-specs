@@ -26,7 +26,7 @@ describe("Hash.Cookie", {
 	
 	'should remove a hash cookie': function(){
 		Cookie.remove('hash_cookie_test');
-		value_of(Cookie.get('hash_cookie_test')).should_be_false();
+		value_of(!!Cookie.get('hash_cookie_test')).should_be_false();
 	}
 
 });
