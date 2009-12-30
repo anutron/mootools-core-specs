@@ -5,7 +5,7 @@ var UnitTester = {
 	ready: function(UnitTester){
 		new UnitTester({
 			core: '../../Libraries/core.1.2.4/', //path to Source/scripts.json
-			more: '../../Libraries/more.1.2.4.2/' //path to Source/scripts.json
+			more: '../../Libraries/more/' //path to Source/scripts.json
 		}, {
 			Tests: '../1.1public/Tests/' //path to tests.json
 		}, {
