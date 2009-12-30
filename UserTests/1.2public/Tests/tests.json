@@ -1,6 +1,6 @@
 {
 	"Class": {
-		"Chain": ["all"]
+		"Class.Extras": ["all"]
 	},
 	"Fx": {
 		"Fx.Tween":["all"],

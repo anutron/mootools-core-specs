@@ -7,7 +7,7 @@
 			before: function(){
 				var mySlide = new Slider($('area'), $('knob'), {
 					onChange: function(pos){
-						$('upd').set('html', pos);
+						$('upd').setHTML(pos);
 					}
 				}).set(0);
 			}
@@ -21,7 +21,7 @@
 					steps: 10,
 					snap: true,
 					onChange: function(pos){
-						$('upd2').set('html', pos);
+						$('upd2').setHTML(pos);
 					}
 				}).set(0);
 			}

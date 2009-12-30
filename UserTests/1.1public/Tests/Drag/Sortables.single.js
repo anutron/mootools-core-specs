@@ -9,11 +9,10 @@
 					clone: true,
 					opacity: 0.6,
 					onComplete: function(){
-						$('order').set('html', 'order: ' + mySort.serialize())
+						$('order').setHTML('order: ' + mySort.serialize())
 					}
 				});
 			}
 		}
-	],
-	otherScripts: ['Element.Position']
+	]
 }
