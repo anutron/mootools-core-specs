@@ -57,7 +57,7 @@ describe('Events', {
 	},
 
 	'should remove an event immediately': function(){
-		var object = new Events();
+		var instance = new Events();
 
 		var methods = [];
 
@@ -65,17 +65,18 @@ describe('Events', {
 			methods.push(3);
 		};
 
-		object.addEvent('event', function(){
+		instance.addEvent('test', function(){
 			methods.push(1);
-			this.removeEvent('event', three);
-		}).addEvent('event', function(){
+		}).addEvent('test', function(){
 			methods.push(2);
-		}).addEvent('event', three);
-		
-		object.fireEvent('event');
+		}).addEvent('test', three);
+
+		instance.removeEvent('test', three);
+
+		instance.fireEvent('test');
 		value_of(methods).should_be([1, 2]);
 
-		object.fireEvent('event');
+		instance.fireEvent('test');
 		value_of(methods).should_be([1, 2, 1, 2]);
 	}
 
