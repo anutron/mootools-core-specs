@@ -19,6 +19,8 @@ License:
 	
 	
 	listen('load', window, function(event) {
+		//hack to get this working with IE
+		if (window.ie) event.target = event.target || document;
 		e = new Event(event);
 	});
 	
