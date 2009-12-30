@@ -63,6 +63,8 @@ var JSSpec = {
 	}
 };
 
+// JSSpec.useTryCatch = JSSpec.Browser.Trident;
+JSSpec.useTryCatch = false; // Disable window.onerror style error reporting since it doesn't work in multiIE versions of IE6. FIXME: Add a feature test for useTryCatch
 
 
 /**
@@ -116,7 +118,7 @@ JSSpec.Executor.prototype.run = function() {
 	window.setTimeout(
 		function() {
 			var result;
-			if(JSSpec.Browser.Trident) {
+			if(!JSSpec.useTryCatch) {
 				window._curExecutor = self;
 				
 				result = self.target();
