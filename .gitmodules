@@ -4,3 +4,6 @@
 [submodule "Libraries/more"]
 	path = Libraries/more
 	url = git://github.com/mootools/mootools-more.git
+[submodule "UnitTester"]
+	path = UnitTester
+	url = git://github.com/anutron/mootools-unittester.git
