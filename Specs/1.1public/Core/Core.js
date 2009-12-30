@@ -290,16 +290,19 @@ describe('$type', {
 	"should return 'element' for an Element": function(){
 		var div = document.createElement('div');
 		value_of($type(div)).should_be('element');
-	},
-	
-	"should return 'object' for the window object": function(){
-		//1.2 breaking
-		value_of($type(window)).should_be('object');
-	},
-
-	"should return 'object' for the document object": function(){
-		//1.2 breaking
-		value_of($type(document)).should_be('object');
 	}
+
+	//$type(window) and $type(document) produce varying results in 1.1 in diff browsers; 
+	//these objects were not supported with this method
+	//
+	// "should return 'object' for the window object": function(){
+	// 	//1.2 breaking
+	// 	value_of($type(window)).should_be('object');
+	// },
+	// 
+	// "should return 'object' for the document object": function(){
+	// 	//1.2 breaking
+	// 	value_of($type(document)).should_be('object');
+	// }
 
 });
