@@ -1,0 +1,16 @@
+{
+	"Class": {
+		"Chain": ["all"]
+	},
+	"Fx": {
+		"Fx.Tween":["all"],
+		"Fx.Morph":["all"]
+	},
+	"Element": {
+		"Element":["iframe"],
+		"Element.Dimensions":["offsets", "scrollSize"]
+	},
+	"Request": {
+		"Request":["all"]
+	}
+}
