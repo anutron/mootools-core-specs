@@ -11,8 +11,8 @@ var UnitTester = {
 		}, {
 			compatibilities: {
 				core: {
-					aliases: '../../Libraries/core/Compatibility/aliases.json',
-					scripts: '../../Libraries/core/Compatibility/compat.json'
+					aliases: '../../Compatibility/aliases.json',
+					scripts: '../../Compatibility/compat.json'
 				}
 			}
 		});

@@ -7,3 +7,6 @@
 [submodule "UnitTester"]
 	path = UnitTester
 	url = git://github.com/anutron/mootools-unittester.git
+[submodule "Compatibility"]
+	path = Compatibility
+	url = git://github.com/anutron/mootools-upgrade-helper.git
